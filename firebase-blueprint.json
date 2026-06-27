@@ -1,0 +1,30 @@
+{
+  "entities": {
+    "Reservation": {
+      "title": "Reservation",
+      "description": "A table reservation at Rastura",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "name": { "type": "string" },
+        "email": { "type": "string" },
+        "phone": { "type": "string" },
+        "date": { "type": "string" },
+        "time": { "type": "string" },
+        "guests": { "type": "string" },
+        "notes": { "type": "string" },
+        "seatingPreference": { "type": "string" },
+        "status": { "type": "string", "enum": ["pending", "confirmed", "cancelled"] },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["id", "userId", "name", "email", "phone", "date", "time", "guests", "seatingPreference", "status", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/reservations/{reservationId}": {
+      "schema": "Reservation",
+      "description": "Collection of all restaurant reservations"
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Rastura",
+  "description": "An elegant, high-contrast digital narrative and reservation portal for RASTURA.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

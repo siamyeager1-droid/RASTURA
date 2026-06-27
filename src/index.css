@@ -1,0 +1,135 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Work+Sans:wght@400;500;600;700&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0..1,0&display=swap');
+
+@theme {
+  --font-display: "Anton", sans-serif;
+  --font-body: "Work Sans", sans-serif;
+
+  --color-primary: #b31f08;
+  --color-primary-dark: #8c1704;
+  --color-on-primary: #ffffff;
+  --color-background: #fbf9f8;
+  --color-on-background: #1b1c1c;
+  --color-surface: #fbf9f8;
+  --color-on-surface: #1b1c1c;
+  --color-on-surface-variant: #5b5c5c;
+  --color-secondary: #5f5e5e;
+  --color-secondary-container: #e2dfde;
+  --color-outline: #1b1c1c;
+  --color-outline-variant: #e4e2e2;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f5f3f3;
+  --color-surface-container: #efeded;
+  --color-surface-container-high: #e9e8e7;
+  --color-surface-container-highest: #e4e2e2;
+  --color-inverse-surface: #1b1c1c;
+}
+
+@layer utilities {
+  .material-symbols-outlined {
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-smoothing: antialiased;
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+  
+  .vertical-rail {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+  }
+
+  .leader-line {
+    background-image: radial-gradient(circle, #8f706a 1px, transparent 1px);
+    background-size: 8px 8px;
+    background-position: bottom;
+    background-repeat: repeat-x;
+    flex-grow: 1;
+    margin: 0 12px;
+    height: 12px;
+    position: relative;
+    top: -2px;
+  }
+  
+  .leader-line-drinks {
+    background-image: radial-gradient(circle, #b31f08 1px, transparent 1px);
+    background-size: 8px 8px;
+    background-position: bottom;
+    background-repeat: repeat-x;
+  }
+  
+  .card-hover {
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  
+  .card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0px 12px 30px rgba(27, 28, 28, 0.08);
+    border-color: #b31f08;
+  }
+
+  /* Luxurious Premium Glassmorphism */
+  .glass-card {
+    background: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 8px 32px 0 rgba(179, 31, 8, 0.04), inset 0 1px 0 0 rgba(255, 255, 255, 0.8);
+  }
+
+  .glass-panel {
+    background: rgba(251, 249, 248, 0.7);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(179, 31, 8, 0.08);
+    box-shadow: 0 12px 40px 0 rgba(27, 28, 28, 0.06), inset 0 1px 0 0 rgba(255, 255, 255, 0.5);
+  }
+
+  .glass-button {
+    background: rgba(251, 249, 248, 0.5);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(179, 31, 8, 0.2);
+    color: #b31f08;
+    box-shadow: 0 4px 12px 0 rgba(179, 31, 8, 0.05);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .glass-button:hover {
+    background: #b31f08;
+    border-color: #b31f08;
+    color: #ffffff;
+    transform: translateY(-1px);
+    box-shadow: 0 8px 20px 0 rgba(179, 31, 8, 0.2);
+  }
+
+  .glass-button-primary {
+    background: rgba(179, 31, 8, 0.07);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(179, 31, 8, 0.3);
+    color: #b31f08;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .glass-button-primary:hover {
+    background: #b31f08;
+    border-color: #b31f08;
+    color: #ffffff;
+    box-shadow: 0 8px 24px 0 rgba(179, 31, 8, 0.25);
+    transform: translateY(-2px);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
